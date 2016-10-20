@@ -1,20 +1,17 @@
 ﻿using UnityEngine;
 
 public class CardSlot : MonoBehaviour {
-
-    public GameObject cardInSlot;
-    private Card card;
+    public Card card;
     private CardMovement cardMovement;
 
     private void Start() {
-        cardMovement = cardInSlot.GetComponent<CardMovement>();
-        card = cardInSlot.GetComponent<Card>();
+        cardMovement = card.GetComponent<CardMovement>();
     }
 
     public void CardInHand() {
         Vector3 cameraPosition = Camera.main.ScreenToWorldPoint( Input.mousePosition );
         Vector2 mousePosition = new Vector2( cameraPosition.x, cameraPosition.y );
-        cardInSlot.transform.position = mousePosition;
+        card.transform.position = mousePosition;
         card.state = CardState.CARD_IN_HAND;
     }
 

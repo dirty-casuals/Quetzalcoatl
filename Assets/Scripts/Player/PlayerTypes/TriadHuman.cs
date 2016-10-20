@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 
 public class TriadHuman : TriadPlayer {
-
     private CardSlot currentCardSlot;
 
     protected override void InitializeTriadPlayer() {
@@ -19,6 +18,9 @@ public class TriadHuman : TriadPlayer {
             draggingCard = true;
         }
         if ( Input.GetMouseButtonUp( 0 ) ) {
+            if ( currentCardSlot != null ) {
+                currentCardSlot.card.PlayCard();
+            }
             draggingCard = false;
         }
     }

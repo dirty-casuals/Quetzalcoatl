@@ -11,6 +11,7 @@ public class CardMovement : MonoBehaviour {
     private Card card;
 
     private void Start() {
+        card = GetComponent<Card>();
         startPosition = transform.position;
     }
 
@@ -34,11 +35,11 @@ public class CardMovement : MonoBehaviour {
     }
 
     private IEnumerator MoveCardToStartPosition() {
+        card.state = CardState.CARD_IN_DECK;
         Vector3 targetPosition = new Vector3( startPosition.x, startPosition.y, 0.0f );
         while ( transform.position != targetPosition ) {
             transform.position = Vector3.MoveTowards( transform.position, targetPosition, 0.4f );
             yield return new WaitForEndOfFrame();
         }
-        card.state = CardState.CARD_IN_DECK;
     }
 }
