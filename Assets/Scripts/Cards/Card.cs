@@ -1,15 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Card : MonoBehaviour {
+public enum CardState {
+    CARD_IN_DECK,
+    CARD_IN_HAND,
+    CARD_IN_BOARD,
+}
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+public class Card : MonoBehaviour {
+    public CardState state = CardState.CARD_IN_DECK;
 }

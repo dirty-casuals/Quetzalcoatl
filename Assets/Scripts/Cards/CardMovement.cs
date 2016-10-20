@@ -3,13 +3,12 @@ using System.Collections;
 
 public class CardMovement : MonoBehaviour {
 
-    [HideInInspector]
-    public bool cardInHand;
     [SerializeField]
     private float verticalHover;
     [SerializeField]
     private float horizontalHover;
     private Vector2 startPosition;
+    private Card card;
 
     private void Start() {
         startPosition = transform.position;
@@ -40,6 +39,6 @@ public class CardMovement : MonoBehaviour {
             transform.position = Vector3.MoveTowards( transform.position, targetPosition, 0.4f );
             yield return new WaitForEndOfFrame();
         }
-        cardInHand = false;
+        card.state = CardState.CARD_IN_DECK;
     }
 }
