@@ -1,0 +1,8 @@
+{
+	"Identifier":"5aabc995-a483-47bb-b7ab-b764e6a863e4"	, 
+	"Time":"10/20/2016 9:41:26 AM"	, 
+	"Group":94126	, 
+	"DataRecordId":"b61ae91a-a60b-4241-96e4-438695b28577"	, 
+	"Type":0	, 
+	"RecordType":"uFrame.ECS.Editor.EcsWorkspace, Assembly-CSharp-Editor-firstpass, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"	, 
+	"Data":"{\r\n\t\"Identifier\":\"b61ae91a-a60b-4241-96e4-438695b28577\"\t, \r\n\t\"Name\":\"Boomer\"\t, \r\n\t\"Expanded\":false}\r\n"}
