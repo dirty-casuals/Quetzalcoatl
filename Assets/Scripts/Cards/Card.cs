@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public enum CardState {
     CARD_IN_DECK,
@@ -10,6 +9,11 @@ public enum CardState {
 public class Card : MonoBehaviour {
     public CardState state = CardState.CARD_IN_DECK;
     private BoardSection currentSection;
+    private CardMovement cardMovement;
+
+    private void Start() {
+        cardMovement = GetComponent<CardMovement>();
+    }
 
     private void Update() {
         if ( state != CardState.CARD_IN_HAND ) {
@@ -17,6 +21,12 @@ public class Card : MonoBehaviour {
         }
         BoardSection newSection = GetClosestBoardSection();
         ChangeBoardSection( newSection );
+    }
+
+    public void PlayCard() {
+        HighlightBoard( null );
+        cardMovement.StopHover();
+        StartCoroutine( cardMovement.MoveCardToStartPosition() );
     }
 
     private BoardSection GetClosestBoardSection() {
@@ -42,10 +52,6 @@ public class Card : MonoBehaviour {
         return closestSection;
     }
 
-    public void PlayCard() {
-
-    }
-
     private void ChangeBoardSection( BoardSection section ) {
         if ( section == currentSection ) {
             return;
@@ -57,15 +63,15 @@ public class Card : MonoBehaviour {
     private void HighlightBoard( BoardSection section ) {
         if ( section == null ) {
             if ( currentSection != null ) {
-                currentSection.GetComponent<SpriteRenderer>().color = Color.white;
+                currentSection.GetComponent<Outline>().enabled = false;
                 return;
             }
         }
         if ( section != null ) {
-            section.GetComponent<SpriteRenderer>().color = Color.red;
+            section.GetComponent<Outline>().enabled = true;
         }
         if ( currentSection != null ) {
-            currentSection.GetComponent<SpriteRenderer>().color = Color.red;
+            currentSection.GetComponent<Outline>().enabled = false;
         }
     }
 }

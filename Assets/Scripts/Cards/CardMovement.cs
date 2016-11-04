@@ -22,7 +22,6 @@ public class CardMovement : MonoBehaviour {
 
     public void StopHover() {
         StopAllCoroutines();
-        StartCoroutine( MoveCardToStartPosition() );
     }
 
     private IEnumerator MoveCardToHoverPosition() {
@@ -34,7 +33,7 @@ public class CardMovement : MonoBehaviour {
         }
     }
 
-    private IEnumerator MoveCardToStartPosition() {
+    public IEnumerator MoveCardToStartPosition() {
         card.state = CardState.CARD_IN_DECK;
         Vector3 targetPosition = new Vector3( startPosition.x, startPosition.y, 0.0f );
         while ( transform.position != targetPosition ) {

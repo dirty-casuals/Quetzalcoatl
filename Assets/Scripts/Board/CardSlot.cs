@@ -27,5 +27,6 @@ public class CardSlot : MonoBehaviour {
             return;
         }
         cardMovement.StopHover();
+        card.PlayCard();
     }
 }

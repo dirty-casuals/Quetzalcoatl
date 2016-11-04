@@ -1,2 +1,0 @@
-install uFrame/ECS
-install nitreo/csharp60
