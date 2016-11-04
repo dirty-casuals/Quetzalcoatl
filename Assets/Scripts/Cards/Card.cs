@@ -23,9 +23,19 @@ public class Card : MonoBehaviour {
         ChangeBoardSection( newSection );
     }
 
+    public void HoverOverCard() {
+        cardMovement.HoverCard();
+    }
+
     public void PlayCard() {
         HighlightBoard( null );
         cardMovement.StopHover();
+        if ( currentSection != null && !currentSection.hasCard ) {
+            state = CardState.CARD_IN_BOARD;
+            transform.position = currentSection.transform.position;
+            currentSection.hasCard = true;
+            return;
+        }
         StartCoroutine( cardMovement.MoveCardToStartPosition() );
     }
 

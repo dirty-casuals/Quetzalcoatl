@@ -16,6 +16,9 @@ public class CardMovement : MonoBehaviour {
     }
 
     public void HoverCard() {
+        if ( card.state == CardState.CARD_IN_BOARD ) {
+            return;
+        }
         StopAllCoroutines();
         StartCoroutine( MoveCardToHoverPosition() );
     }
