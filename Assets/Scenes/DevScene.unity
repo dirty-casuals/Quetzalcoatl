@@ -488,7 +488,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 302011112}
   m_Layer: 0
-  m_Name: PlayerDeck
+  m_Name: PlayerOneDeck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -584,6 +584,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3baa866f4e8b89b4aa65f93a702da04d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasCard: 0
 --- !u!114 &410357140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -746,6 +747,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3baa866f4e8b89b4aa65f93a702da04d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasCard: 0
 --- !u!50 &416182015
 Rigidbody2D:
   serializedVersion: 2
@@ -1116,6 +1118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3baa866f4e8b89b4aa65f93a702da04d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasCard: 0
 --- !u!114 &551616125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1672,6 +1675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3baa866f4e8b89b4aa65f93a702da04d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasCard: 0
 --- !u!114 &1098304968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1802,6 +1806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3baa866f4e8b89b4aa65f93a702da04d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasCard: 0
 --- !u!114 &1149124615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1856,6 +1861,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3baa866f4e8b89b4aa65f93a702da04d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasCard: 0
 --- !u!114 &1234109285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2094,6 +2100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3baa866f4e8b89b4aa65f93a702da04d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasCard: 0
 --- !u!50 &1502861425
 Rigidbody2D:
   serializedVersion: 2
@@ -2199,6 +2206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3baa866f4e8b89b4aa65f93a702da04d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasCard: 0
 --- !u!114 &1817289952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2333,6 +2341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3baa866f4e8b89b4aa65f93a702da04d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasCard: 0
 --- !u!114 &1968955389
 MonoBehaviour:
   m_ObjectHideFlags: 0
