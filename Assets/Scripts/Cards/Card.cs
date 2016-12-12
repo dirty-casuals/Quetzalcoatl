@@ -73,15 +73,15 @@ public class Card : MonoBehaviour {
     private void HighlightBoard( BoardSection section ) {
         if ( section == null ) {
             if ( currentSection != null ) {
-                currentSection.GetComponent<Outline>().enabled = false;
+                //currentSection.GetComponent<Outline>().enabled = false;
                 return;
             }
         }
         if ( section != null ) {
-            section.GetComponent<Outline>().enabled = true;
+            //section.GetComponent<Outline>().enabled = true;
         }
         if ( currentSection != null ) {
-            currentSection.GetComponent<Outline>().enabled = false;
+            //currentSection.GetComponent<Outline>().enabled = false;
         }
     }
 }
